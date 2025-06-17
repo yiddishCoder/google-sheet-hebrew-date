@@ -44,6 +44,7 @@ function mf(data, weekDay) {
   if (data.hasOwnProperty('events')) {
     // && parshas.hasOwnProperty(data.events[0].substring(data.events[0].indexOf(" ") + 1))) {
     let parshaArray = data.events.filter(e => e.startsWith("Parashat"))
+
     if (parshaArray.length > 0) {
       //let exists = false
       hebParsha = parshas[parshaArray[0].substring(parshaArray[0].indexOf(" ") + 1)]
@@ -61,7 +62,6 @@ function mf(data, weekDay) {
     year: hebYear,
     yearAbbr: hebYearAbbr
   }
-  Logger.log(order)
   let output = ""
   for (i = 1; i <= Object.keys(order).length; i++) {
     if (obj.hasOwnProperty(order[i])) output += obj[order[i]] + " ";
@@ -124,8 +124,8 @@ let parshas = {
   "Bechukotai": "בחוקותי",
   "Bamidbar": "במדבר",
   "Nasso": "נשא",
-  "Beha'alotcha": "בהעלותך",
-  "Sh'lach": "שלח",
+  "Beha’alotcha": "בהעלותך",
+  "Sh’lach": "שלח",
   "Korach": "קרח",
   "Chukat": "חקת",
   "Balak": "בלק",
@@ -135,13 +135,13 @@ let parshas = {
   "Devarim": "דברים",
   "Vaetchanan": "ואתחנן",
   "Eikev": "עקב",
-  "Re'eh": "ראה",
+  "Re’eh": "ראה",
   "Shoftim": "שופטים",
   "Ki Teitzei": "תצא",
   "Ki Tavo": "תבוא",
   "Nitzavim": "נצבים",
   "Vayeilech": "וילך",
-  "Ha'Azinu": "האזינו",
+  "Ha’Azinu": "האזינו",
   "Vezot Haberakhah": "וזאת הברכה",
   "Vayakhel-Pekudei": "ויק\"פ",
   "Tazria-Metzora": "תזו\"מ",
